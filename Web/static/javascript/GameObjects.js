@@ -11,144 +11,145 @@
 
 //HOME
 var Home = new Room("Home",
-    "You are in the comfort of your own home.",
+    "Sei nel benessere della tua casa.",
     "loc_farm.gif");
-Home.addItem(new Item("WelcomeLetter", "Welcome! If you are new to the game, here are some tips: \n\n" +
-		"Look at your surroundings with the command \"ls\". \n" +
-		"Move to a new location with the command \"cd LOCATION\" \n" +
-		"You can backtrack with the command \"cd ..\". \n" +
-		"Interact with things in the world with the command \"less ITEM\" \n\n" +
-        "If you forget where you are, type \"pwd\" \n\n" + 
-		"Go ahead, explore. We hope you enjoy what you find. Do ls as your first command.\n"));
+Home.addItem(new Item("WelcomeLetter", "Benvenut*! Se sei nuov* del gioco, ecco alcuni suggerimenti: \n\n" +
+		"Guardati attorno con il comando \"ls\". \n" +
+		"Spostati in un luogo \"cd LUOGO\" \n" +
+		"Puoi tornare indietro con il comando \"cd ..\". \n" +
+		"Interagisci con le cose del mondo con il comando \"less ELEMENTO\" \n\n" +
+        "Se hai dimenticato dove sei, digita \"pwd\" \n\n" + 
+		"Avanti, esplora! Speriamo ti piaccia quanto troverai. Come primo comando dai ls.\n"));
 
-//WESTERN FOREST
-var WesternForest = new Room("WesternForest",
-    "You enter and travel deep into the forest. \
-Eventually, the path leads to a clearing with a large impressive building. A sign \
-on it reads: Spell Casting Academy: The Elite School of Magic.",
+//FORESTA OCCIDENTALE
+var WesternForest = new Room("ForestaOccidentale",
+    "Avanzi addentrandoti nelle profondità della foresta. \
+Alla fine, il sentiero conduce a una radura con un grande edificio imponente. Un cartello \
+recita: Accademia di Incantesimi: Scuola d'Elite di Magia.",
     "loc_forest.gif");
-WesternForest.addItem(new Item("Sign",
-    "Spell Casting Academy: The Elite School of Magic \
-Today Only: Free Introductory Lessons! Novices welcome!",
+WesternForest.addItem(new Item("Cartello",
+    "Accademia di Incantesimi: Scuola d'Elite di Magia \
+Solo per oggi: lezioni introduttive gratuite! I/le principianti sono benvenut*!",
     "loc_forest.gif"));
 WesternForest.addItem(new Item("BackSign",
-    "If you ever want to go directly Home, just type 'cd ~' or just plain old `cd' \
-and you'll come back Home. Getting back might be more difficult though.",
+    "Se vuoi tornare direttamente alla 'Home', digita semplicemente “cd ~” o il buon vecchio “cd” \
+e tornerai a Casa. Tornare indietro, però, potrebbe essere più difficile.",
     "loc_forest.gif"));
 
-//SPELL CASTING ACADEMY
-var SpellCastingAcademy = new Room("SpellCastingAcademy", 
-    "The halls are filled the hustle \
-and bustle of academy students scurrying to and from classes. The inside of the \
-academy is as impressive as it is on the outside with a high ceiling and gothic \
-arches, it seems even larger on the inside.", 
+//ACCADEMIA DI MAGIA
+var SpellCastingAcademy = new Room("AccademiaDiMagia", 
+    "I corridoi sono pieni del trambusto \
+degli studenti dell'Accademia che corrono da una lezione all'altra. L'interno dell'Accademia \
+è impressionante quanto l'esterno, con il soffitto alto e archi gotici \
+che la fanno sembrare ancora più grande.", 
     "loc_academy.gif");
-var HurryingStudent = new Item("HurryingStudent", 
-    "You speak to a hurrying student. \
-The student runs into you and falls to the ground. \
-The student quickly gets up \
-and apologizes to you, asking if you are okay. You are sturdier than you look and \
-you're undamaged. I'm so sorry, I was in such a hurry that I didn't see you \
-there... Say, I haven't seen you here before. You're new here aren't-cha?\" the \
-student winks at you, \"Don't worry, there's tons of newbies around today, \
-why don't you try checking out one of the free intro lessons? I'd show you where \
-to go, but I gotta run to class. Just head into the Lessons hall and someone \
-should help you out. See you around.\" The student runs past you. You notice that \
-the student is pretty cute, and probably around your age. Unfortunately, the \
-student disappears around a corner before you can ask for a name.", 
+var HurryingStudent = new Item("StudenteInRitardo", 
+    "Parli con un* studente in ritardo. \
+Lx studente ti urta e cade a terra. \
+L* studente si alza rapidamente \
+e ti chiede scusa, domandandoti se stai bene. Sei più solid* di quanto sembri e \
+non hai riportato alcun danno. \"Mi dispiace tanto, ero così di fretta che non ti ho vist*... \
+A proposito, è la prima volta che ti vedo. Sei nuov* qui, vero?\" L* studente ti fa l'occhiolino, \"Non preoccuparti, \
+oggi ci sono tantissimi nuovi arrivati, \
+perché non provi a dare un'occhiata a una delle lezioni introduttive gratuite? Ti mostrerei dove andare, \
+ma devo correre a lezione. Entra nella sala delle lezioni e qualcuno \
+ti aiuterà. Ci vediamo in giro.\" L* studente ti supera correndo. Noti che \
+è piuttosto carin* e probabilmente ha la tua età. Purtroppo, \
+scompare dietro un angolo prima che tu riesca chiedere il nome...", 
     "item_student.gif")
 SpellCastingAcademy.addItem(HurryingStudent);
 
-//PRACTICE ROOM
-var PracticeRoom = new Room("PracticeRoom", 
-    "The room is filled with practice dummies \
-for students to practice their new spells on.",
+//SALA ESERCIZI
+var PracticeRoom = new Room("SalaEsercizi", 
+    "La stanza è piena di manichini \
+su cui gli studenti possono esercitarsi con i loro nuovi incantesimi.",
     "loc_practiceroom.gif");
-PracticeRoom.addItem(new Item("Instructions", 
-    "Welcome to the Practice Room. Here \
-you will find practice dummies try your new spells on. Go ahead, give it a go! \
-If you don't know any spells yet, go back and check out some Lessons.", 
+PracticeRoom.addItem(new Item("Istruzioni", 
+    "Benvenuto nella Sala di Allenamento. Qui \
+troverai dei manichini su cui provare i tuoi nuovi incantesimi. Avanti, provaci! \
+Se non conosci ancora nessun incantesimo, torna indietro e dai un'occhiata alle Lezioni.", 
     "item_manuscript.gif"));
-PracticeRoom.addItem(new Item("PracticeDummy1", "It's a practice dummy", "item_dummy.gif"));
-PracticeRoom.addItem(new Item("PracticeDummy2", "It's a practice dummy", "item_dummy.gif"));
-PracticeRoom.addItem(new Item("PracticeDummy3", "It's a practice dummy", "item_dummy.gif"));
-PracticeRoom.addItem(new Item("PracticeDummy4", "It's a practice dummy", "item_dummy.gif"));
-PracticeRoom.addItem(new Item("PracticeDummy5", "It's a practice dummy", "item_dummy.gif"));
+PracticeRoom.addItem(new Item("Manichino1", "E' un manichino", "item_dummy.gif"));
+PracticeRoom.addItem(new Item("Manichino2", "E' un manichino", "item_dummy.gif"));
+PracticeRoom.addItem(new Item("Manichino3", "E' un manichino", "item_dummy.gif"));
+PracticeRoom.addItem(new Item("Manichino4", "E' un manichino", "item_dummy.gif"));
+PracticeRoom.addItem(new Item("Manichino5", "E' un manichino", "item_dummy.gif"));
 PracticeRoom.addCommand("mv");
 
-//BOX
-var Box = new Room("Box", "This box is too small for you to fit into.", "item_box.gif");
+//SCATOLA
+var Box = new Room("Scatola", "Questa scatola è troppo piccola, non ci stai...", "item_box.gif");
 Box.removeCommand("cd");
-Box.addCmdText("cd", "You are too small to fit into the box.");
+Box.addCmdText("cd", "Sei troppo piccol* per la scatola.");
 
-//NORTHERN MEADOW
-var NorthernMeadow = new Room("NorthernMeadow", 
-    "This is a beautiful green meadow. A plump but majestic pony prances happily about.",
+//PRATO DEL NORD
+var NorthernMeadow = new Room("PratoDelNord", 
+    "Questo è un bellissimo prato verde. Un pony grassoccio ma maestoso saltella allegramente.",
     "loc_meadow.gif");
 NorthernMeadow.addItem(new Item("Pony", 
-    "You go up to the pony and attempt to ride it. \
-It compiles and you ride the pony around in circles for a bit. It then grows tired \
-of having you as a burden and knocks you off. He then looks towards the east as if \
-suggesting that you head in that direction.", 
+    "Ti avvicini al pony e provi a cavalcarlo. \
+Funziona e cavalchi il pony in cerchio per un po'. Poi si stufa \
+del tuo peso peso e ti disarciona. Poi guarda verso est, come per \
+suggerirti di andare in quella direzione.", 
     "item_fatpony.gif"));
 
-//EASTERN MOUNTAINS
-var EasternMountains = new Room("EasternMountains", 
-    "You travel through a mountain path, \
-which eventually leads you to the entrance of a cave. Sitting right outside this \
-cave is an old man.", 
+//MONTAGNE ORIENTALI
+var EasternMountains = new Room("MontagneOrientali", 
+    "Percorri un sentiero di montagna, \
+che alla fine ti conduce all'ingresso di una caverna. Seduto all'ingresso dalla caverna \
+c'è un vecchio.", 
     "loc_mountains.gif");
-EasternMountains.addItem(new Item("OldMan", 
-    "You speak with the old man. He greets \
-you warmly as if you were old friends. You feel at ease with him. \n\
-\"Hello adventurer! Top of the morning to you! You seem like a young and energetic \
-explorer. If you're brave enough, your destiny awaits within this cave. That \
-destiny will manifest itself as a portal. Enter this portal and begin the next \
-chapter of your life.\"\n\
-The old man sees the shock on your face and smiles a \
-comforting smile, \"I am but a fragile old man, and cannot accompany you through \
-this cave, but what I can provide are a few simple spells that will help you \
-along your way. Just read my old manuscripts and tryout those spells.\"", 
+EasternMountains.addItem(new Item("Vecchio", 
+    "EasternMountains.addItem(new Item("Vecchio", 
+    "Parli con il vecchio. Ti saluta \
+calorosamente come se foste vecchi amici. Ti senti a tuo agio con lui. \n\
+\"Salve avventurier*! Buongiorno! Sembri un'esplorator* giovane \
+ed energic*. Se sei abbastanza coraggios*, il tuo destino ti aspetta all'interno di questa caverna. Quel \
+destino si manifesterà sotto forma di un portale. Entra in questo portale e inizia il prossimo \
+capitolo della tua vita.\"\n\
+Il vecchio vede lo shock sul tuo viso e sorride \
+rassicurante, \"Sono solo un povero vecchio e non posso accompagnarti attraverso \
+questa caverna, ma ciò che posso offrire sono alcuni semplici incantesimi che ti aiuteranno \
+lungo il cammino. Basta leggere i miei vecchi manoscritti e provare quegli incantesimi.\"", 
 	"item_mysteryman.gif"));
-EasternMountains.addItem(new Item("OldManuscripts", 
-    "If you ever forget a spell just use \
-\"help\" and a list of available spells will appear. If you need details on how \
-to use a specific spell, use 'man' followed by spell command. For example, \
-if you were interested in details on how to use the \"mv\" spell you would use: \
+EasternMountains.addItem(new Item("VecchiManoscritti", 
+    "Se dimentichi un incantesimo, usa semplicemente \
+\“help”\ e apparirà un elenco degli incantesimi disponibili. Se hai bisogno di dettagli su come \
+usare un incantesimo specifico, usa 'man' seguito dal comando dell'incantesimo. Ad esempio, \
+se ti interessano i dettagli su come usare l'incantesimo “mv”, dovresti usare: \
 man mv",
     "item_manuscript.gif"));
 
-//LESSONS
-var Lessons = new Room("Lessons", 
-    "You enter the Lessons hall ready and eager. \
-It's much quieter here, as many of the lessons have already started. \
-You quickly ushered into the Introductory Lesson, which already begun. \
-You enter the class on the \"Move Spell.\"", 
+//LEZIONI
+var Lessons = new Room("Lezioni", 
+    "Entri nell'aula delle lezioni pront* e impaziente. \
+Qui è molto più tranquillo, molte lezioni sono già iniziate. \
+Vieni portat* velocemente alla lezione introduttiva, che è già iniziata. \
+Entri nella classe dedicata all'\"Incantesimo di Movimento.\"", 
     "loc_classroom.gif");
-Lessons.addItem(new Item("Professor", 
-    "The professor is difficult to understand, but you pick up just enough to learn 3 things: \
+Lessons.addItem(new Item("Professore", 
+    "Il professore è difficile da capire, ma riesci a cogliere quanto basta per imparare 3 cose: \
 \n\
-1. You can use 'mv' to move things in the world \n\
-2. You have to indicate the object and the new location (i.e.: mv OBJECT NEWLOCATION) \n\
-3. This spell will only work on certain objects, for example the PracticeDummy objects in the PracticeRoom \n\
+1. Puoi usare 'mv' per spostare oggetti nel mondo \n\
+2. Devi indicare l'oggetto e la nuova posizione (ad es.: mv OGGETTO NUOVAPOSIZIONE) \n\
+3. Questo incantesimo funziona solo su determinati oggetti, ad esempio gli oggetti Manichino nella SalaEsercizi \n\
 \n\
-You did not pay enough attention to learn which types of objects are unmovable. \
-Oh well, experimenting was always more of your style anyways. But be careful!", 
+Non hai prestato abbastanza attenzione per imparare quali tipi di oggetti non sono spostabili. \
+Oh beh, sperimentare è sempre stato più nel tuo stile comunque. Ma fai attenzione!", 
     "item_professor.gif"));
 
-//CAVE
-var Cave = new Room("Cave", "It's your typical cave: dark and dank.", "loc_cave.gif");
+//CAVERNA
+var Cave = new Room("Caverna", "E' la tipica caverna: buia e umida.", "loc_cave.gif");
 		
-//DARK CORRIDOR
-var DarkCorridor = new Room("DarkCorridor", 
-    "You travel through the dark corridor and find a small dank room at the end.", 
+//CorridoioBuio
+var DarkCorridor = new Room("CorridoioBuio", 
+    "Attraversi il corridoio buio e alla fine trovi una piccola stanza umida.", 
     "loc_corridor.gif");
 
-//STAIRCASE
-var Staircase = new Room("Staircase", 
-    "The rocky staircase leads you to a dead end and a sign indicating such.", 
+//SCALA
+var Staircase = new Room("Scala", 
+    "La scala rocciosa conduce a un vicolo cieco e a un cartello che lo indica.", 
     "loc_stair.gif");
-Staircase.addItem(new Item("Sign", "DEAD END", "item_sign.gif"));
+Staircase.addItem(new Item("Cartello", "CULO DI SACCO", "item_sign.gif"));
 
 //DANK ROOM
 var DankRoom = new Room("DankRoom", 

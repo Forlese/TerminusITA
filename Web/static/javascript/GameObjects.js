@@ -151,102 +151,102 @@ var Staircase = new Room("Scala",
     "loc_stair.gif");
 Staircase.addItem(new Item("Cartello", "CULO DI SACCO", "item_sign.gif"));
 
-//DANK ROOM
-var DankRoom = new Room("DankRoom", 
-    "It's a musty dank room. A round boulder sits to the right side of the room.",
+//STANZA UMIDA
+var DankRoom = new Room("StanzaUmida", 
+    "È una stanza umida e ammuffita. Sul lato destro della stanza c'è un masso rotondo.",
     "loc_darkroom.gif");
-var Boulder = new Item("Boulder",
-    "You feel a slight breeze coming from behind the boulder. \
-Maybe move it out of your way?",
+var Boulder = new Item("Masso",
+    "Senti un'arietta leggera da dietro il masso. \
+Magari lo sposti?",
     "item_boulder.gif")
 DankRoom.addItem(Boulder);
 DankRoom.addCommand("mv");
 
-//SMALL HOLE
-var SmallHole = new Room("SmallHole", 
-    "There's nothing exciting in the small hole, and it's pretty dirty. \
-There's no real reason to go into the hole.",
+//PICCOLO BUCO
+var SmallHole = new Room("PiccoloBuco", 
+    "Non c'è nulla di eccitante in quel piccolo buco, ed è piuttosto sporco. \
+Non c'è alcun motivo valido per entrarci.",
     "none.gif");
 SmallHole.addCmdText("cd", 
-    "There's nothing exciting in the small hole, and it's pretty dirty. I suggest going back out.");
+    "Non c'è nulla di eccitante nel piccolo buco, ed è piuttosto sporco. Suggerisco di uscirne.");
 //add event handler to the "addItem" method of SmallHole to cause the rest of the level to be connected
-DankRoom.ev.addListener("mvBoulder", function(){
-	// link_rooms(DankRoom, Tunnel);
-    state.applyState("mvBoulder");
+DankRoom.ev.addListener("mvMasso", function(){
+	// link_rooms(StanzaUmida, Tunnel);
+    state.applyState("mvMasso");
 });
 
 //TUNNEL
 var Tunnel = new Room("Tunnel", 
-    "It's quite moist in here. \
-    You notice a small furry movement in the corner of your vision. \
-It's most likely a rat. A very large rat. Perhaps a mongoose. \
-At the end of the tunnel you find a stone chamber.",
+    "Qui dentro è piuttosto umido. \
+    Con la coda dell'occhio noti un piccolo movimento peloso nell'angolo. \
+Probabilmente è un ratto. Un ratto molto grande. Forse una mangusta. \
+Alla fine del tunnel trovi una camera di pietra.",
     "loc_tunnel.gif");
-Tunnel.addItem(new Item("Rat", 
-    "Upon further inspection, you determine that the furry \
-presence is in fact a rat...the size of a small dog. It bites you. \
-You are very displeased.",
+Tunnel.addItem(new Item("Ratto", 
+    "Dopo un'ulteriore ispezione, determini che la presenza pelosa \
+è in realtà un ratto... delle dimensioni di un piccolo cane. Ti morde. \
+Sei molto scontent*.",
     "item_rat.gif"));
 
-//STONE CHAMBER
-var StoneChamber = new Room("StoneChamber", 
-    "The whole rooms glows a dim green light. \
-The source of this light is a portal standing in the middle of the room. \
-This is obviously the portal of which the old man spoke.", 
+//GROTTA
+var StoneChamber = new Room("Grotta", 
+    "L'intero ambiente è illuminato da una tenue luce verde. \
+La fonte di questa luce è un portale che si trova al centro della stanza. \
+E' ovviamente il portale di cui parlava il vecchio.", 
     "loc_portalroom.gif");
 
-//PORTAL (to bring you to the next level
-var Portal = new Room("Portal", 
+//PORTALE (to bring you to the next level
+var Portal = new Room("Portale", 
     "You have been transported through time...", 
     "item_portal.gif");
 //---------------END LEVEL 1-----------------
 
 
 //---------------LEVEL 2---------------------
-//TOWN SQUARE
-var TownSquare = new Room("TownSquare", 
-    "You are in a sunny and spacious town square. \
-There is a pedestal at the center of the cobblestone turnabout, but no statue on it. \
-The architecture is charming, but everyone here seems nervous for some reason.",
+//PIAZZA DEL PAESE
+var TownSquare = new Room("PiazzaDelPaese", 
+    "Ti trovi in una piazza spaziosa e soleggiata . \
+Al centro di un crocevia c'è un piedistallo, ma senza statue. \
+L'architettura è affascinante, ma qui per qualche motivo sembrano tutt* nervos*.",
     "loc_square.gif");
-TownSquare.addItem(new Item("RandomCitizen1", 
-    "\"Excuse me,\" you begin. The man turns, startled. \
-\"Oh, hello! Welcome to Terminus. You'll have to forgive me, but we're all a little \
-on edge lately, what with the Dark Wizard spreading corruption all along the \
-coast.  You should be careful!\"",
+TownSquare.addItem(new Item("Cittadino1", 
+    "\"Chiedo scusa,\" esordisci. L'uomo si volta, sorpreso. \
+\"Oh, salve! Benvenuto a Terminus. Mi perdoni, ma ultimamente siamo tutti un po' \
+nervosi, con il Mago Oscuro che sta diffondendo la corruzione lungo tutta la \
+costa. Stia attent*!\"",
     "item_citizen1.gif"));
-TownSquare.addItem(new Item("RandomCitizen2", 
-    "The man looks up from his newspaper when he notices you staring. \
-\"Have you read this?\" he exclaims, shaking the latest edition of \"The Last \
-Word\" in your face. \"It says here the wizard's corruption has spread as far \
-as Oston to the south, and New Console is completely unrecoverable! These are \
-dangerous times,\" he mutters, shaking his head and turning back to his reading.",
+TownSquare.addItem(new Item("Cittadino2", 
+    "L'uomo ti guarda da sopra il giornale quando si accorge che lo stai fissando. \
+\"Ha letto?\" esclama, agitando l'ultima edizione de \"L'Ultimo \
+Mondo\" sotto al tuo naso. \"Qui dice che la corruzione del mago si è diffusa fino a \
+Oston a sud, e New Console è completamente irrecuperabile! Questi sono \
+tempi pericolosi\", mormora, scuotendo la testa e tornando alla lettura.",
     "item_citizen2.gif"));
-TownSquare.addItem(new Item("DistraughtLady", 
-    "The woman is sobbing uncontrollably, her face in her hands. \
-\"My baby,\" she cries, \"They kidnapped my baby! I just know that wizard had \
-something to do with it.\"",
+TownSquare.addItem(new Item("DonnaSconvolta", 
+    "La donna singhiozza incontrollabilmente, il viso tra le mani. \
+\“Il mio bambino\”, grida, \"Hanno rapito il mio bambino! So solo che tutto questo \
+dev'essere colpa di quel mago.\"",
     "item_lady.gif"));
 
-//MARKETPLACE
-var Marketplace = new Room("Marketplace", 
-    "Vendors and their goods line the streets.",
+//MERCATO
+var Marketplace = new Room("Mercato", 
+    "Linee di mercanti e delle loro merci affollano le strade.",
     "loc_market.gif");
-var Vendor = new Item("Vendor", 
-    "\" 'Ello there.\" The vendor smiles at you unpleasantly, \
-revealing a mouth full of gold teeth. \"Well? Wot are you looking for?\"",
+var Vendor = new Item("", 
+    "\" Ma ciao.\” Il venditore ti sorride in modo sgradevole, \
+mostrando la bocca piena di denti d'oro. \“Allora? Cosa stai cercando?\"",
     "item_merchant.gif");
 Vendor.addCmdText("rm", 
-    "\"Ha! That spell doesn't work on everything, you know. I may have forgotten \
-to mention that before I sold it to you...\"");
-Marketplace.addItem(Vendor);
-//var Backpack = new Item("Backpack", "There's a beat-up looking backpack on the table with no price tag.  Its cloth looks \n" +
-//		"frayed, but sturdy. You glance quickly at the vendor, but his attention is elsewhere. \n" +
-//		"Do you take the backpack? y\\n \n", "item_backpack.gif");
-//Marketplace.addItem(Backpack);
-var RmSpell = new Item("rmSpell", 
-    "\"Ah, yes, the rm spell,\" the Vendor muses. \"Simply say \"rm\" followed by the name of an item or person, \
-and they will disappear from this plane... forever. D'you have the guts to use it, I wonder?\"",
+    "\"Ah! Quell'incantesimo non funziona su tutto, sai. Forse ho dimenticato \
+di dirlo prima di vendertelo...\"");
+Marketplace.addItem(Mercante);
+//var Backpack = new Item("Sacca", "Sul tavolo c'è una sacca dall'aspetto malconcio senza cartellino del prezzo.  Il tessuto sembra \n" +
+//        "sfilacciato, ma resistente. Dai un'occhiata veloce al venditore, ma la sua attenzione è altrove. \n" +
+//		"Vuoi prendere la sacca? s\\n \n", "item_backpack.gif");
+//Marketplace.addItem(Sacca);
+var RmSpell = new Item("rmIncantesimo", 
+    "\"Ah, sì, l'incantesimo rm,\" riflette il Mercante. \”Basta dire \"rm\" seguito dal nome di un oggetto o di una persona, \
+e questi scompariranno da questo piano... per sempre. Mi chiedo se avrai il coraggio di usarlo.\"",
     "item_manuscript.gif");
 
 //	"There's a spell scroll on the table labeled \"Remove.\" \n" +

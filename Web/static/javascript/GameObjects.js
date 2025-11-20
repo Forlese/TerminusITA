@@ -11,7 +11,7 @@
 
 //HOME
 var Home = new Room("Home",
-    "Sei nel benessere della tua casa.",
+    "Sei nel benessere di casa tua.",
     "loc_farm.gif");
 Home.addItem(new Item("WelcomeLetter", "Benvenut*! Se sei nuov* del gioco, ecco alcuni suggerimenti: \n\n" +
 		"Guardati attorno con il comando \"ls\". \n" +
@@ -31,7 +31,7 @@ WesternForest.addItem(new Item("Cartello",
     "Accademia di Incantesimi: Scuola d'Elite di Magia \
 Solo per oggi: lezioni introduttive gratuite! I/le principianti sono benvenut*!",
     "loc_forest.gif"));
-WesternForest.addItem(new Item("BackSign",
+WesternForest.addItem(new Item("RetroCartello",
     "Se vuoi tornare direttamente alla 'Home', digita semplicemente “cd ~” o il buon vecchio “cd” \
 e tornerai a Casa. Tornare indietro, però, potrebbe essere più difficile.",
     "loc_forest.gif"));
@@ -249,130 +249,130 @@ var RmSpell = new Item("rmIncantesimo",
 e questi scompariranno da questo piano... per sempre. Mi chiedo se avrai il coraggio di usarlo.\"",
     "item_manuscript.gif");
 
-//	"There's a spell scroll on the table labeled \"Remove.\" \n" +
-//		"Do you want to buy it for 15 gold pieces? y/n \n", "item_manuscript.gif")
-//"The vendor snatches the gold from your hand and then hands you the scroll,\n" +
-//				"leering as he does so. \"Ah, yes, the rm spell,\" he muses. \"Simply say \"rm\" followed by the name of an item or person, \n" +
-//				"and they will disappear from this plane... forever. D'you have the guts to use it, I wonder?\"\n" +
-//				"You can now use the \"rm\" spell.\n", "Come back later.\n");
+//	"Sul tavolo c'è una pergamena incantata con la scritta \"Rimuovi.\" \n" +
+//		"Vuoi comrarla per 15 pezzi d'oro? s/n \n", "item_manuscript.gif")
+//"Il mercante ti strappa l'oro dalle mani e poi ti consegna la pergamena,\n" +
+//				"con uno sguardo lascivo. \"Ah, sì, l'incantesimo rm,\" riflette. \"Sbasta dire \"rm\" seguito dal nome di una persona o di un oggetto, \n" +
+//				"e questi scompariranno da questo piano... per sempre. Mi chiedo se avrai il coraggio di usarlo\"\n" +
+//				"ora puoi usare l'incantesimo \"rm\".\n", "Torna più tardi.\n");
 Marketplace.addItem(RmSpell);
-var MkdirSpell = new Item("mkdirSpell",
-    "\"Make dreams into reality. Just say \"mkdir\" followed by any name that pleases you, and you can create a new place that \
-never existed there before. A little finicky, though...\" the Vendor mumbles.",
+var MkdirSpell = new Item("Incantesimomkdir",
+    "\"Trasforma i sogni in realtà. basta dire \"mkdir\" seguito da qualunque nome ti piaccia, e puoi creare un nuovo luogo che \
+prima non esisteva. E' un po' complicato, comunque...\" mormora il Mercante.",
     "item_manuscript.gif");
-//		"Do you want to buy it for 30 gold pieces? y\\n \n"
-//, "The vendor cackles. \"An ambitious one, eh? Very well. \n" +
-//				"Just say \"mkdir\" followed by any name that pleases you, and you can create a new place \n" +
-//				"that never existed there before. Ha! Not very useful, if y'ask me...\"\n" +
-//				"You can now use the \"mkdir\" spell.\n", "You leave the mkdirSpell on the table\n");
+//		"Vuoi comprarlo per 30 pezzi d'oro? s\\n \n"
+//, "Il mercante gracchia. \"Ambizios*, eh? Molto bene. \n" +
+//				"Basta dire \"mkdir\" seguito da qualunque nome ti piaccia, e puoi creare un nuovo luogo che \n" +
+//				"prima non esisteva. Ha! Non molto utile secondo me...\"\n" +
+//				"ora puoi usare l'incantesimo \"mkdir\".\n", "Lasci l'Incantesimomkdir sul tavolo\n");
 Marketplace.addItem(MkdirSpell);
 
-//LIBRARY
-var Library = new Room("Library", 
-    "The Library is dimly lit and smells like mildew. \
-Still, it's warm in here and the soft green carpet makes it seem kind of cozy.",
+//BIBLIOTECA
+var Library = new Room("Biblioteca", 
+    "La biblioteca è buia e odora di muffa. \
+Comunque, dentro fa caldo e il morbido tappeto verde rende l'ambiente piuttosto accogliente.",
     "loc_library.gif");
-Library.addItem(new Item("TotallyRadSpellbook",
-    "Legends speak of a great word of power that allows the speaker to perform \
-any action on any item. \"Sudo\", as the ancients called it, conveys complete mastery over the elements. \
-Unfortunately, or perhaps fortunately, the mystical password has been lost \
-to the sands of time.",
+Library.addItem(new Item("LibroFighissimoDiIncantesimi",
+    "Le leggende narrano di una potente parola che permette a chi la pronuncia di compiere \
+qualsiasi azione su qualsiasi oggetto. \“Sudo\”, come la chiamavano gli antichi, conferisce il completo dominio sugli elementi. \
+Sfortunatamente, o forse fortunatamente, la password mistica si è perduta \
+nelle sabbie del tempo.",
     "item_radspellbook.gif"));
-Library.addItem(new Item("PaperbackRomance", 
-    "You flip the paperback open to a random page. \
-\"Oh, Horatio, don't worry my love! I will save you!\" Antonia exclaimed as she \
-brandished her sword and deftly stabbed the dragon. Horatio, astounded that he hadn't died a fiery death,\
- collapsed on the ground sobbing and  ... — You close the \
-book, disinterested, and place it back on the shelf.",
+Library.addItem(new Item("TascabileRomantico", 
+    "Apri il libro tascabile su una pagina a caso. \
+\"Oh, Orazio, non preoccuparti amore mio! Ti salverò!\" esclamò Antonia mentre \
+brandiva la sua spada e pugnalava abilmente il drago. Orazio, stupito di non essere morto violentemente,\
+crollò a terra singhiozzando e  ... — Chiudi il \
+libro disinteressat*, lo rimetti a posto sullo scaffale.",
     "item_romancenovel.gif"));
-Library.addItem(new Item("HistoryOfTerminus", 
-    "It looks like an interesting book, but it's way too long and the print is too tiny. \
-Here is an excerpt:\n \
-DarkWizard', '...old tales tell of a DarkWizard who will fragment the land...\n \
-...only the world-maker can stop the DarkWizard's virus from...\n\
-...that the power of \"sudo\" may be the DarkWizard's only weakness...\n",
+Library.addItem(new Item("StoriaDiTerminus", 
+    "Sembra un libro interessante, ma è troppo lungo e la stampa troppo piccola. \
+Ecco un estratto:\n \
+MagoOscuro', '...vecchi racconti narrano di un MagoOscuro che frammenterà la terra...\n \
+...solo il creatore di mondi potrà impedire che il virus del MagoOscuro...\n\
+...che il potere di \“sudo\” potrebbe essere l'unica debolezza del MagoOscuro...\n",
     "item_historybook.gif"));
-Library.addItem(new Item("NostalgiaForHome", 
-    "If you ever get lonely for Home, just 'cd ~' and you'll go back there. \
-But just remember that it will be harder to come back.",
+Library.addItem(new Item("NostalgiaDiCasa", 
+    "Se mai ti sentissi sol* e avessi nostalgia di Casa, basta digitare 'cd ~' e tornerai lì. \
+Ma ricorda che tornare indietro potrebbe essere più difficile.",
     "item_historybook.gif"));
 		// "DarkWizard", "...old tales tell of a dark wizard who will fragment the land...\n" +
 		//"...only the world-maker can stop the dark wizard's virus from...\n" +
 		//"...that the power of \"sudo\" may be the dark wizard's only weakness...\n"));
 //add lever back when items when events can be added to items
-Library.addItem(new Item("InconspicuousLever", 
-   "You spot an inconspicuous lever behind the shelves.  Curious, you pull it, \
-and a panel slides open to reveal a secret back room.",
+Library.addItem(new Item("LevaDiscreta", 
+   "Notate una leva discreta dietro gli scaffali.  Incuriosit*, la tiri, \
+e un pannello scorre aprendosi per rivelare una stanza segreta sul retro.",
    "item_lever.gif"));
 Library.addCommand("grep");
 Library.ev.addListener("pullLever", function(){
     state.applyState("pullLever");
 });
 
-//BACK ROOM
-var BackRoom = new Room("BackRoom", 
-    "You find a mysterious back room. You find a librarian \
-alone with a small elf. You hope you're not interrupting.",
+//RETRO BOTTEGA
+var BackRoom = new Room("RetroBottega", 
+    "C'è una misteriosa stanza sul retro. Trovi un bibliotecario \
+da solo con un piccolo elfo. Speri di non interrompere nulla.",
     "loc_backroom.gif");
 BackRoom.addItem(new Item("Grep", 
-    "The exceptionally ugly elf turns to you with a sour expression. \
-\"Greeeeeep,\" he says sullenly.",
+    "L'elfo, di una bruttezza eccezionale, si gira verso di te con un'espressione acida. \
+\“Greeeeeep\”, dice cupamente.",
     "grep.gif"));
-BackRoom.addItem(new Item("PracticeBook", 
-    "Sally picked a peck\nOf seashelled peppers.\nA seashore of pickled pickles\n\
-did Peter and Sally pick."));
-var Librarian = new Item("Librarian", 
-    "\"Hm? Oh, hello. I apologize for the mess, but I'm very busy \
-doing research on the dark wizard. Would you do me a favor? Go look up all \
-references to DarkWizard in the History of Terminus. My assistant Grep \
-can help you.\" \
-Grep eyes you balefully. \"Greeepp.\" \"To search the contents of the book, just type \
-\"grep PHRASE ITEM\", where PHRASE is the phrase you want to search for, \
-and ITEM is the name of the book you want to search. Try it with the PracticeBook here \
-- see if you can find the line with the word 'peppers' in it.\"",
+BackRoom.addItem(new Item("LibroDegliEsercizi", 
+    "Trentatrè trentini\nOf entrarono a Trento.\nA tutti e trentatrè\n\
+trotterellando."));
+var Librarian = new Item("Bibliotecario", 
+    "\"Hm? Oh, ciao. Scusa per il disordine, ma sono molto preso \
+dalle ricerche sul mago oscuro. Mi faresti un favore? Vai a cercare tutti \
+i riferimenti a MagoOscuro nella Storia di Terminus. Il mio assistente Grep \
+può aiutarti.\" \
+Grep ti fissa minacciosamente. \"Greeepp.\" \"Per filtrare il contenuto del libro, basta digitare \
+\“grep FRASE ELEMENTO\”, dove FRASE è la frase che si desidera cercare, \
+ed ELEMENTO è il nome del libro che si desidera cercare. Provalo con il LibroDegliEsercizi qui \
+- - vedi se riesci a trovare la riga con la parola 'Trento'.\"",
     "item_librarian.gif");
 BackRoom.addItem(Librarian);
 BackRoom.addCommand("grep");
 
-//ROCKY PATH
-var RockyPath = new Room("RockyPath",
-    "The weed-choked path leads off into the fields.",
+//SENTIERO ROCCIOSO
+var RockyPath = new Room("SentieroRoccioso",
+    "Il sentiero ricoperto di erbacce si inoltra per i campi.",
     "loc_rockypath.gif");
-var LargeBoulder = new Item("LargeBoulder", "There is an enormous boulder blocking your way.  It's much too big to move.", "item_boulder.gif");
-LargeBoulder.addCmdText("rm", "The boulder disappears with a pop.");
+var LargeBoulder = new Item("GrandeMasso", "C'è un enorme masso che blocca la strada.  È troppo grande per spostarlo.", "item_boulder.gif");
+LargeBoulder.addCmdText("rm", \"Pop!\" Il masso scompare.".");
 RockyPath.addItem(LargeBoulder);
 RockyPath.addCommand("rm");
 LargeBoulder.addValidCmd("rm");
-RockyPath.ev.addListener("rmLargeBoulder", function(){
-    state.applyState("rmLargeBoulder");
+RockyPath.ev.addListener("rmGrandeMasso", function(){
+    state.applyState("rmGrandeMasso");
 });
 
-//ARTISAN'S SHOP
-var ArtisanShop = new Room("ArtisanShop", 
-    "The walls of the shop are covered in clocks, \
-all slightly out of sync. At the workbench, a woman in an enormous pair of goggles \
-is wielding a blowtorch with frightening enthusiasm.",
+//BOTTEGA
+var ArtisanShop = new Room("Bottega", 
+    "Le pareti del negozio sono ricoperte di orologi, \
+tutti leggermente fuori sincrono. Al banco da lavoro una donna con enormi occhiali protettivi \
+maneggia una fiamma ossidrica con spaventoso entusiasmo.",
     "loc_artisanshop.gif");
-var StrangeTrinket = new Item("StrangeTrinket", "It looks like a crystal of some sort. It's very beautiful.", "item_trinket.gif");
+var StrangeTrinket = new Item("StranoGingillo", "Sembra una specie di cristallo. E' molto bello.", "item_trinket.gif");
 StrangeTrinket.addCmdText("rm", 
-    "Didn't your mother ever teach you that it's rude to rease other people's \
-things from their plane of existence?");
+    "Non te l'ha insegnato la mamma che è scortese cancellare la roba \
+d'altri dal loro piano di esistenza?");
 StrangeTrinket.addCmdText("mv", 
-    "You can't take that, it's not yours!");
+    "Non puoi prenderlo, non è roba tua!");
 ArtisanShop.addItem(StrangeTrinket);
-var ClockworkDragon = new Item("ClockworkDragon",
-    "A dragon the size of a small dog is frolicking about the room. \
-You'd think it was real if it weren't for the wind-up key sticking out of its back.",
+var ClockworkDragon = new Item("DragoMeccanico",
+    "Un drago grande quanto un piccolo cane sta saltellando per la stanza. \
+Se non fosse per la chiave a molla che spunta dalla sua schiena lo scambieresti per vero.",
     "item_clockdragon.gif");
 ClockworkDragon.addCmdText("rm",  
-    "Didn't your mother ever teach you that it's rude to erase other people's \
-things from their plane of existence?");
+    "Non te l'ha insegnato la mamma che è scortese cancellare la roba \
+d'altri dal loro piano di esistenza?");
 ClockworkDragon.addCmdText("mv", 
-    "You can't take that, it's not yours!");
+    "Non puoi prenderlo, non è roba tua!");
 ArtisanShop.addItem(ClockworkDragon);
-var Artisan = new Item("Artisan", 
-    "The Artisan lifts up her goggles and peers at you in \
-surprise. \"Are you the new assistant? You're late! ...  \
+var Artisan = new Item("Artigiana", 
+    "L'Artigiana solleva gli occhiali e ti guarda sorpresa. \
+ \"Are you the new assistant? You're late! ...  \
 \n\
 You say you aren't my assistant? \
 Well, that doesn't mean you can't make yourself useful. I need some gears, quickly! \
